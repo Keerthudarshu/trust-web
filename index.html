@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Repatriates United Seva Trust</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="/trust-web/images/image.png" alt="Trust Logo">
+        <h2>TAMIL REPATRIATES UNITED SEVA TRUST</h2>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><i class="material-icons">home</i> Home</a></li>
+          <li><a href="#medical"><i class="material-icons">local_hospital</i> Medical</a></li>
+          <li><a href="#sports"><i class="material-icons">sports_soccer</i> Sports</a></li>
+          <li><a href="#album"><i class="material-icons">photo_camera</i> Album</a></li>
+          <li><a href="#about"><i class="material-icons">info</i> About</a></li>
+          <li><a href="#contact"><i class="material-icons">phone</i> Contact</a></li>
+        </ul>
+        
+      </nav>
+    </aside>
+
+   
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="hero">
+        <div class="moving-container">
+          <div class="flex items-center space-x-4 moving-text">
+            <h1 class="text-4xl font-bold mb-8 moving-h1">
+              <img src="images/image.png" alt="Logo" class="inline-logo" />
+              TAMIL REPATRIATES UNITED SEVA TRUST
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="slideshow">
+        <div class="slideshow-container" id="slideshow-container">
+          <div class="slide fade">
+            <img src="slide1.jpg" alt="Slide 1">
+            <div class="caption">Caption for Slide 1</div>
+          </div>
+          <div class="slide fade">
+            <img src="slide2.jpg" alt="Slide 2">
+            <div class="caption">Caption for Slide 2</div>
+          </div>
+          <div class="slide fade">
+            <img src="slide3.jpg" alt="Slide 3">
+            <div class="caption">Caption for Slide 3</div>
+          </div>
+          <!-- Add more slides as needed -->
+      
+          <!-- Next and Previous Buttons -->
+          <a class="prev" onclick="changeSlide(-1)">❮</a>
+          <a class="next" onclick="changeSlide(1)">❯</a>
+        </div>
+        <!-- Dots/Indicators -->
+        <div class="dots" id="dots"></div>
+      </section>
+      
+      <section class="featured">
+        <h2>Featured Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container Setup */
+  .container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #202940;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar .logo {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Space between logo section and other content */
+}
+
+.sidebar .logo img {
+    max-width: 80px; /* Restrict the size of the logo */
+    max-height: 80px;
+    margin-bottom: 10px; /* Space between the image and the heading */
+}
+
+.sidebar .logo h2 {
+    font-size: 16px; /* Adjust font size */
+    color: #fdf9f9; /* Adjust text color */
+    margin: 0; /* Remove default margin */
+}
+
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .moving-h1 {
+    animation: moveH1 10s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  @keyframes moveH1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Logo styling */
+  .inline-logo {
+    height: 50px; /* Adjust size */
+    margin-right: 10px; /* Space between logo and text */
+  }
+  .menu a:hover,
+  .menu a.active {
+    background-color: #394867;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #202940;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Content Area */
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f9;
+  }
+  
+ .hero img {
+    width: 30px;
+    height: 50px;
+    border-radius: 0px;
+  }
+  
+  
+  
+  .featured h2 {
+    margin-bottom: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .featured p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      transform: translateX(-100%);
+    }
+  
+    .sidebar.active {
+      transform: translateX(0);
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  /* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Navigation Buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  /* Dot Indicators */
+  .dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .dots span {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dots .active {
+    background-color: #717171;
+  }
+  
+  /* Fade Animation */
+  .fade {
+    animation: fade 1.5s ease-in-out;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
